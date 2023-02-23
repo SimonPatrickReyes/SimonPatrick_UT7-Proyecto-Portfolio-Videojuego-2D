@@ -1,0 +1,100 @@
+body {
+  background-color: #f2f2f2;
+  margin: 0;
+  font-family: League Spartan, sans-serif;
+}
+
+header {
+  color: #fff;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #000;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  display: flex;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 20px;
+  list-style: none;
+}
+
+nav a {
+  color: #fff;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+main {
+  padding: 2rem;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+img {
+  height: 10rem;
+}
+
+.logo {
+  height: 8rem;
+}
+
+.personajes li {
+  list-style: none;
+}
+
+.lorena {
+  cursor: pointer;
+}
+
+.carousel {
+  vertical-align: middle;
+  align-content: center;
+  display: flex;
+  position: relative;
+}
+
+.arrow {
+  width: 40px;
+  height: 20rem;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  background-color: #00000080;
+  font-size: 24px;
+  font-weight: 600;
+  position: sticky;
+}
+
+.carousel .left-arrow {
+  left: 1px;
+}
+
+.carousel .right-arrow {
+  right: 1px;
+}
+
+.carousel img {
+  max-width: 30%;
+  height: auto;
+  display: none;
+}
+
+.carousel .active {
+  display: block;
+}
+
+/*# sourceMappingURL=index.4d663569.css.map */
