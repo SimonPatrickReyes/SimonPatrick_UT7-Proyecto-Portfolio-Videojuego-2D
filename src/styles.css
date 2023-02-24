@@ -46,6 +46,7 @@ body {
 
   p{
     font-size: 1.3rem;
+    max-width: 71%;
   }
 
   img{
@@ -68,6 +69,57 @@ body {
     margin-left: 2rem;
   }
 
+  .ul{
+    list-style: none;
+    width: 80%;
+    background: lightgrey;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+  }
+
+  .ul .li{
+    background: orange;
+    overflow: hidden;
+  }
+
+  .ul .a{
+
+  }
+
+  .ul .img{
+    height: 15vh;
+    transition: all .5s ease;
+    transform: scale(1.4);
+  }
+
+  .ul .li:hover .img{
+    transform: scale(1);
+  }
+
+  .lightbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,.8);
+    z-index: 2;
+
+  }
+
+  .lightbox .cerrar{
+    width: 3em;
+    height: 3em;
+    background: orange;
+  }
+
+  .lightbox .grande{
+    width: 80%;
+    height: 80vh;
+    background: lightblue;
+  }
   .nav{
     margin-right: 2rem;
   }
@@ -111,22 +163,32 @@ body {
 height: 29rem;
 } */
 .carrousel .puntos{
-  width: 100%;
-  padding: .4em;
+  padding: 1rem;
   display: flex;
   flex-flow: row nowrap;
   justify-content: center;
   align-items: center;
+  list-style: none;
 }
 
 .carrousel .punto{
-  font-size: 3rem;
-  width: 2em;
-  height: 2em;
-  margin: .2em;
+  font-size: 0.8rem;
+  margin-left: 1rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  width:fit-content;
+  height:fit-content;
   cursor: pointer;
+  background-color: #37aff0;
+  border-radius: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.carrousel .punto:hover {
+  background-color: #228bc4;
 }
 
 .carrousel .punto.activo{
-color: #37aff0;
+color: #eee;
+background-color: #166f9e;
 }

@@ -1,5 +1,5 @@
 "use strict";
-let sound = new Audio("audios/audios_audio_bici.mp3");
+let sound = new Audio("./audios/audios_audio_bici.ogg");
 var carrousel = document.querySelector(".carrousel");
 var images = carrousel.querySelectorAll("img");
 var currentImageIndex = 0;
@@ -20,14 +20,12 @@ punto.forEach((cadaPunto, i)=>{
     });
 });
 draggableImage.addEventListener("mousedown", function(e) {
-    isDragging = !isDragging;
-    if (isDragging) {
-        offsetX = e.clientX - parseInt(window.getComputedStyle(draggableImage).left);
-        offsetY = e.clientY - parseInt(window.getComputedStyle(draggableImage).top);
-        sound.play();
-    }
+    isDragging = true;
+    offsetX = e.clientX - parseInt(window.getComputedStyle(draggableImage).left);
+    offsetY = e.clientY - parseInt(window.getComputedStyle(draggableImage).top);
 });
 document.addEventListener("mousemove", function(e) {
+    e.preventDefault();
     if (isDragging) {
         draggableImage.style.left = e.clientX - offsetX + "px";
         draggableImage.style.top = e.clientY - offsetY + "px";
@@ -36,7 +34,6 @@ document.addEventListener("mousemove", function(e) {
 });
 document.addEventListener("mouseup", function() {
     isDragging = false;
-    sound.play();
 });
 
 //# sourceMappingURL=index.816e7b21.js.map
