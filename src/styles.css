@@ -44,8 +44,18 @@ body {
     margin-bottom: 1rem;
   }
 
+  p{
+    font-size: 1.3rem;
+  }
+
+
   img{
     height: 10rem;
+  }
+
+  aside{
+    width: 55%;
+    text-justify: auto;
   }
   
   .logo{
@@ -62,44 +72,3 @@ body {
 
 /****************************/
 
-.carousel {
-  display: flex;
-  position: relative;
-  align-content: center;
-  vertical-align: middle;
-}
-
-.arrow {
- 
-  position:sticky;
-  width: 40px;
-  height: 20rem;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  font-size: 24px;
-  font-weight: 600;
-  text-align: center;
-  cursor: pointer;
-}
-
-
-.carousel .left-arrow {
-  left: 1;
-}
-
-.carousel .right-arrow {
-  right: 1;
-}
-
-
-
-
-.carousel img {
-  display: none;
-  max-width: 30%;
-  height: auto;
-}
-
-.carousel .active {
-  display: block;
-}

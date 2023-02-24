@@ -44,8 +44,17 @@ h2 {
   font-size: 2rem;
 }
 
+p {
+  font-size: 1.3rem;
+}
+
 img {
   height: 10rem;
+}
+
+aside {
+  width: 55%;
+  text-justify: auto;
 }
 
 .logo {
@@ -58,43 +67,6 @@ img {
 
 .lorena {
   cursor: pointer;
-}
-
-.carousel {
-  vertical-align: middle;
-  align-content: center;
-  display: flex;
-  position: relative;
-}
-
-.arrow {
-  width: 40px;
-  height: 20rem;
-  color: #fff;
-  text-align: center;
-  cursor: pointer;
-  background-color: #00000080;
-  font-size: 24px;
-  font-weight: 600;
-  position: sticky;
-}
-
-.carousel .left-arrow {
-  left: 1px;
-}
-
-.carousel .right-arrow {
-  right: 1px;
-}
-
-.carousel img {
-  max-width: 30%;
-  height: auto;
-  display: none;
-}
-
-.carousel .active {
-  display: block;
 }
 
 /*# sourceMappingURL=index.4d663569.css.map */
