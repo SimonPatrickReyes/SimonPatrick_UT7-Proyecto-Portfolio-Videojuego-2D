@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"fLke2":[function(require,module,exports) {
+})({"eYXra":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -558,6 +558,6 @@ function hmrAccept(bundle, id) {
 
 },{}],"4M6V8":[function(require,module,exports) {
 
-},{}]},["fLke2","4M6V8"], "4M6V8", "parcelRequireb8a9")
+},{}]},["eYXra","4M6V8"], "4M6V8", "parcelRequireb8a9")
 
 //# sourceMappingURL=SimonPatrick_UT7-Proyecto-Portfolio-Videojuego-2D.59712999.js.map

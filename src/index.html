@@ -8,13 +8,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=League+Spartan&display=swap" rel="stylesheet">
+  <script defer src="./app.js"></script>
 </head>
 
 <body>
   <header>
     <img src="./img/logo.png" class="logo" alt="logo biking cadiz">
     <h1>Biking Cadiz</h1>
-    <nav>
+    <nav class="nav">
       <ul>
         <li><a href="#">Inicio</a></li>
         <li><a href="#">Personajes</a></li>
@@ -29,77 +30,27 @@
     <p>Biking Cadiz" es un videojuego en 2D en el que Lorena, nuestra protagonista, recorre en bicicleta la ciudad de
       Cádiz mientras sortea a los peatones saltando con la bici. El juego tiene un enfoque de plataformas en el que el
       jugador controla a Lorena, quien debe avanzar por los diferentes niveles mientras salta con su bicicleta.</p>
-  </aside>
-    
-    
-    <section id="galeria">
-      <h2>Paisajes</h2>
+    </aside>
       <div class="carrousel">
-        <div class="arrow left-arrow">&lt;</div>
-        <img src="./img/paisaje1.png" alt="Paisaje_1" class="active">
-        <img src="./img/paisaje2.png" alt="Paisaje_2">
-        <img src="./img/paisaje3.jpeg" alt="Paisaje_3">
-        <img src="./img/paisaje4.png" alt="Paisaje_4">
-        <div class="arrow right-arrow">&gt;</div>
+        <div class="grande">
+        <img src="./img/paisaje1.png" alt="Paisaje_1" class="img">
+        <img src="./img/paisaje2.png" alt="Paisaje_2" class="img">
+        <img src="./img/paisaje1.png" alt="Paisaje_3" class="img">
+        <img src="./img/paisaje1.png" alt="Paisaje_4" class="img">
+        </div>
+        <ul class="puntos">
+          <li class="punto activo"></li>
+          <li class="punto"></li>
+          <li class="punto"></li>
+          <li class="punto"></li>
+        </ul>
       </div>
-    </section>
-
     
-    <img id="draggable-image" src="./img/lorena.png" draggable="true" class="lorena"
-      style="position: absolute; right: 1; bottom: 1;">
   </main>
+  <img id="draggable-image" src="./img/lorena.png" draggable="true" class="lorena">
+
   <footer>
     <p>© 2023 South Park Studios</p>
   </footer>
 </body>
-<script>
-  var carousel = document.querySelector('.carousel');
-  var images = carousel.querySelectorAll('img');
-  var currentImageIndex = 0;
-  var leftArrow = document.querySelector('.left-arrow');
-  var rightArrow = document.querySelector('.right-arrow');
-
-  var draggableImage = document.getElementById("draggable-image");
-  var isDragging = false;
-  var offsetX, offsetY;
-
-  draggableImage.addEventListener('mousedown', function (e) {
-    isDragging = !isDragging;
-    if (isDragging) {
-      offsetX = e.clientX - parseInt(window.getComputedStyle(draggableImage).left);
-      offsetY = e.clientY - parseInt(window.getComputedStyle(draggableImage).top);
-    }
-  });
-
-  document.addEventListener('mousemove', function (e) {
-    if (isDragging) {
-      draggableImage.style.left = (e.clientX - offsetX) + 'px';
-      draggableImage.style.top = (e.clientY - offsetY) + 'px';
-    }
-  });
-
-  document.addEventListener('mouseup', function () {
-    isDragging = false;
-  });
-
-  leftArrow.addEventListener('click', function () {
-    images[currentImageIndex].classList.remove('active');
-    currentImageIndex--;
-    if (currentImageIndex < 0) {
-      currentImageIndex = images.length - 1;
-    }
-    images[currentImageIndex].classList.add('active');
-  });
-
-  rightArrow.addEventListener('click', function () {
-    images[currentImageIndex].classList.remove('active');
-    currentImageIndex++;
-    if (currentImageIndex >= images.length) {
-      currentImageIndex = 0;
-    }
-    images[currentImageIndex].classList.add('active');
-  });
-
-</script>
-
 </html>

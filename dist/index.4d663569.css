@@ -57,8 +57,19 @@ aside {
   text-justify: auto;
 }
 
+footer {
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+
 .logo {
   height: 8rem;
+  margin-left: 2rem;
+}
+
+.nav {
+  margin-right: 2rem;
 }
 
 .personajes li {
@@ -67,6 +78,51 @@ aside {
 
 .lorena {
   cursor: pointer;
+  position: absolute;
+  bottom: 1px;
+  right: 1px;
+}
+
+.carrousel {
+  width: 30%;
+  max-width: 120em;
+  overflow: hidden;
+}
+
+.carrousel .grande {
+  width: 400%;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  transition: all .5s;
+  display: flex;
+  transform: translateX(0%);
+}
+
+.carrousel .img {
+  width: 25%;
+  height: 100%;
+}
+
+.carrousel .puntos {
+  width: 100%;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  padding: .4em;
+  display: flex;
+}
+
+.carrousel .punto {
+  width: 2em;
+  height: 2em;
+  cursor: pointer;
+  margin: .2em;
+  font-size: 3rem;
+}
+
+.carrousel .punto.activo {
+  color: #37aff0;
 }
 
 /*# sourceMappingURL=index.4d663569.css.map */
