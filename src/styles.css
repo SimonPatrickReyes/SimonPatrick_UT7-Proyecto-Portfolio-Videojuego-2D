@@ -114,7 +114,32 @@ body {
 
   .lightbox.activo{
     display: flex;
+    flex-direction: column;
+    row-gap: 10rem;
+    height: 100%;
+    width: 100%;
   }
+
+  .lightbox .content{
+    display: flex;
+    margin: 2rem;
+  }
+
+  .lightbox .content h3{
+    display: flex;
+    margin-right: 20rem;
+  }
+
+  .lightbox .content .seleccion{
+    height: 40rem;
+  }
+  .lightbox.activo .content .descripcion{
+    display: none;
+  }
+  .lightbox.activo .content .descripcion.activo{
+    display: inline;
+  }
+  
 
 
   .lightbox .cerrar{
@@ -123,8 +148,8 @@ body {
     background: orange;
     margin: 0 0 1em;
     cursor: pointer;
-    position: absolute;
-    right: 1;
+    vertical-align: bottom;
+    
   }
 
   .lightbox .grande{

@@ -11,7 +11,8 @@ console.log(enlaces)
 const lightbox = document.querySelector('.lightbox')
 const seleccion = document.querySelector('.lightbox .seleccion')
 const cerrar = document.querySelector('.cerrar')
-
+const descripciones = document.querySelectorAll('.lightbox .descripcion')
+console.log(descripciones)
 enlaces.forEach(( cadaEnlace, i)=>{
     console.log(cadaEnlace)
     enlaces[i].addEventListener('click',(e)=>{
@@ -20,6 +21,10 @@ enlaces.forEach(( cadaEnlace, i)=>{
         console.log(ruta)
         lightbox.classList.add('activo')
         seleccion.setAttribute('src',ruta)
+        descripciones.forEach((cadaDescripcion, i) =>{
+            descripciones[i].classList.remove("activo")
+        })
+        descripciones[i].classList.add("activo")
         
     })
 })

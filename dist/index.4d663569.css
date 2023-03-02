@@ -110,17 +110,42 @@ footer {
 }
 
 .lightbox.activo {
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  row-gap: 10rem;
   display: flex;
+}
+
+.lightbox .content {
+  margin: 2rem;
+  display: flex;
+}
+
+.lightbox .content h3 {
+  margin-right: 20rem;
+  display: flex;
+}
+
+.lightbox .content .seleccion {
+  height: 40rem;
+}
+
+.lightbox.activo .content .descripcion {
+  display: none;
+}
+
+.lightbox.activo .content .descripcion.activo {
+  display: inline;
 }
 
 .lightbox .cerrar {
   width: 6em;
   height: 3em;
   cursor: pointer;
+  vertical-align: bottom;
   background: orange;
   margin: 0 0 1em;
-  position: absolute;
-  right: 1px;
 }
 
 .lightbox .grande {

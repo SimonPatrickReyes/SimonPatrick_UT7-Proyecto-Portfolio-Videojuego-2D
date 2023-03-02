@@ -1,0 +1,7 @@
+{
+    "editor.cursorWidth": 4,
+    "workbench.colorCustomizations": {
+        "editorCursor.background": "#8000ff",
+        "editorCursor.foreground": "#8000ff",
+    },
+}
