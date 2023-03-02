@@ -1,23 +1,46 @@
 'use strict'
 
-
-
 import sound from './audios/audios_audio_bici.mp3'
 const audio = new Audio(sound)
 audio.play()
 
+/************GALERIA LIGHTBOX***********/
+
+const enlaces = document.querySelectorAll('.ul .a')
+console.log(enlaces)
+const lightbox = document.querySelector('.lightbox')
+const seleccion = document.querySelector('.lightbox .seleccion')
+const cerrar = document.querySelector('.cerrar')
+
+enlaces.forEach(( cadaEnlace, i)=>{
+    console.log(cadaEnlace)
+    enlaces[i].addEventListener('click',(e)=>{
+        e.preventDefault()
+        let ruta= cadaEnlace.querySelector('.img').src
+        console.log(ruta)
+        lightbox.classList.add('activo')
+        seleccion.setAttribute('src',ruta)
+        
+    })
+})
+
+cerrar.addEventListener('click',()=>{
+    lightbox.classList.remove('activo')
+})
+/************************************/
 
 
+/***************CARROUSEL**************/
 var carrousel = document.querySelector('.carrousel');
 var images = carrousel.querySelectorAll('img');
 var currentImageIndex = 0;
-
+const grande= document.querySelector('.grande')
 
 var draggableImage = document.getElementById("draggable-image");
 var isDragging = false;
 var offsetX, offsetY;
 
-const grande = document.querySelector('.grande')
+
 const punto = document.querySelectorAll('.punto')
 
 
@@ -34,7 +57,7 @@ punto.forEach( ( cadaPunto, i ) => {
         punto[i].classList.add('activo')
     })
 })
-
+/*************************************/
 
 
 draggableImage.addEventListener('mousedown', function (e) {

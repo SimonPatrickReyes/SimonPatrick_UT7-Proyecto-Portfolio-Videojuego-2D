@@ -563,13 +563,31 @@ var _audiosAudioBiciMp3Default = parcelHelpers.interopDefault(_audiosAudioBiciMp
 "use strict";
 const audio = new Audio((0, _audiosAudioBiciMp3Default.default));
 audio.play();
-var carrousel = document.querySelector(".carrousel");
+/************GALERIA LIGHTBOX***********/ const enlaces = document.querySelectorAll(".ul .a");
+console.log(enlaces);
+const lightbox = document.querySelector(".lightbox");
+const seleccion = document.querySelector(".lightbox .seleccion");
+const cerrar = document.querySelector(".cerrar");
+enlaces.forEach((cadaEnlace, i)=>{
+    console.log(cadaEnlace);
+    enlaces[i].addEventListener("click", (e)=>{
+        e.preventDefault();
+        let ruta = cadaEnlace.querySelector(".img").src;
+        console.log(ruta);
+        lightbox.classList.add("activo");
+        seleccion.setAttribute("src", ruta);
+    });
+});
+cerrar.addEventListener("click", ()=>{
+    lightbox.classList.remove("activo");
+});
+/************************************/ /***************CARROUSEL**************/ var carrousel = document.querySelector(".carrousel");
 var images = carrousel.querySelectorAll("img");
 var currentImageIndex = 0;
+const grande = document.querySelector(".grande");
 var draggableImage = document.getElementById("draggable-image");
 var isDragging = false;
 var offsetX, offsetY;
-const grande = document.querySelector(".grande");
 const punto = document.querySelectorAll(".punto");
 punto.forEach((cadaPunto, i)=>{
     punto[i].addEventListener("click", ()=>{
@@ -582,7 +600,7 @@ punto.forEach((cadaPunto, i)=>{
         punto[i].classList.add("activo");
     });
 });
-draggableImage.addEventListener("mousedown", function(e) {
+/*************************************/ draggableImage.addEventListener("mousedown", function(e) {
     isDragging = true;
     offsetX = e.clientX - parseInt(window.getComputedStyle(draggableImage).left);
     offsetY = e.clientY - parseInt(window.getComputedStyle(draggableImage).top);
@@ -601,9 +619,9 @@ document.addEventListener("mouseup", function() {
 });
 
 },{"./audios/audios_audio_bici.mp3":"jDaVA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jDaVA":[function(require,module,exports) {
-module.exports = require("a825d0ee6af85b79").getBundleURL("lPpKD") + "audios_audio_bici.0125b1e4.mp3" + "?" + Date.now();
+module.exports = require("7391e6d9bf43cf06").getBundleURL("lPpKD") + "audios_audio_bici.0125b1e4.mp3" + "?" + Date.now();
 
-},{"a825d0ee6af85b79":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+},{"7391e6d9bf43cf06":"lgJ39"}],"lgJ39":[function(require,module,exports) {
 "use strict";
 var bundleURL = {};
 function getBundleURLCached(id) {
