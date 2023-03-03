@@ -13,23 +13,23 @@ const seleccion = document.querySelector('.lightbox .seleccion')
 const cerrar = document.querySelector('.cerrar')
 const descripciones = document.querySelectorAll('.lightbox .descripcion')
 console.log(descripciones)
-enlaces.forEach(( cadaEnlace, i)=>{
+enlaces.forEach((cadaEnlace, i) => {
     console.log(cadaEnlace)
-    enlaces[i].addEventListener('click',(e)=>{
+    enlaces[i].addEventListener('click', (e) => {
         e.preventDefault()
-        let ruta= cadaEnlace.querySelector('.img').src
+        let ruta = cadaEnlace.querySelector('.img').src
         console.log(ruta)
         lightbox.classList.add('activo')
-        seleccion.setAttribute('src',ruta)
-        descripciones.forEach((cadaDescripcion, i) =>{
+        seleccion.setAttribute('src', ruta)
+        descripciones.forEach((cadaDescripcion, i) => {
             descripciones[i].classList.remove("activo")
         })
         descripciones[i].classList.add("activo")
-        
+
     })
 })
 
-cerrar.addEventListener('click',()=>{
+cerrar.addEventListener('click', () => {
     lightbox.classList.remove('activo')
 })
 /************************************/
@@ -39,7 +39,7 @@ cerrar.addEventListener('click',()=>{
 var carrousel = document.querySelector('.carrousel');
 var images = carrousel.querySelectorAll('img');
 var currentImageIndex = 0;
-const grande= document.querySelector('.grande')
+const grande = document.querySelector('.grande')
 
 var draggableImage = document.getElementById("draggable-image");
 var isDragging = false;
@@ -49,7 +49,7 @@ var offsetX, offsetY;
 const punto = document.querySelectorAll('.punto')
 
 
-punto.forEach( ( cadaPunto, i ) => {
+punto.forEach((cadaPunto, i) => {
     punto[i].addEventListener('click', () => {
         let posicion = i
         let operacion = posicion * -25

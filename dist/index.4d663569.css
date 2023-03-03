@@ -1,5 +1,5 @@
 body {
-  background-color: #f2f2f2;
+  background-color: #ebfcff;
   margin: 0;
   font-family: League Spartan, sans-serif;
 }
@@ -25,6 +25,11 @@ nav li {
   list-style: none;
 }
 
+nav li:hover {
+  text-shadow: 1px 1px 2px #000, 0 0 1em #fff, 0 0 .2em #fff;
+  font-weight: 600;
+}
+
 nav a {
   color: #fff;
   font-size: 1.2rem;
@@ -35,18 +40,40 @@ main {
   padding: 2rem;
 }
 
+.video {
+  height: 25rem;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  margin: -100px auto 0;
+  display: block;
+}
+
 section {
   margin-bottom: 40px;
 }
 
+h1 {
+  font-size: 3rem;
+}
+
 h2 {
-  margin-bottom: 1rem;
+  margin: 3rem 0;
   font-size: 2rem;
 }
 
 p {
   max-width: 71%;
+  text-justify: auto;
   font-size: 1.3rem;
+}
+
+span {
+  margin-bottom: 2rem;
+  font-size: 4rem;
+  display: block;
 }
 
 img {
@@ -81,7 +108,6 @@ footer {
   height: -moz-fit-content;
   height: fit-content;
   filter: drop-shadow(0 5px 5px #222);
-  border-radius: 40px;
 }
 
 .ul .img {
