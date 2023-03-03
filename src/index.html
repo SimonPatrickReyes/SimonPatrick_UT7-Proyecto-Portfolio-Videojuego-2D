@@ -13,7 +13,7 @@
 
 <body>
   <header>
-    <img src="./img/logo.png" class="logo" alt="logo biking cadiz">
+    <a href="index.html"><img src="./img/logo.png" class="logo" alt="logo biking cadiz"></a>
     <h1>Biking Cadiz</h1>
     <nav class="nav">
       <ul>
@@ -23,16 +23,32 @@
     </nav>
   </header>
   <div class="video">
-  <video src="./video/video_bici.webm" autoplay loop muted></video>
+    <video autoplay loop>
+      <source src="./video/video_bici.webm" autoplay loop/>
+      <source src="./video/video_bici.mp4" autoplay loop/>
+      Su navegador no soporta contenido multimedia
+    </video>
   </div>
+
   <main>
-    <aside>
-      <h2>Biking Cádiz</h2>
-      <p>Biking Cadiz es un videojuego en 2D en el que Lorena, nuestra protagonista, recorre en bicicleta la ciudad de
-        Cádiz mientras sortea a los peatones saltando con la bici. El juego tiene un enfoque de plataformas en el que el
-        jugador controla a Lorena, quien debe avanzar por los diferentes niveles mientras salta con su bicicleta.</p>
-    </aside>
-    
+    <section class="noticias">
+      <h2>NOTICIAS</h2>
+      <a href="#">
+        <article class="noticia">
+          <img src="./img/noticia.png" alt="última actualización de Biking Cádiz">
+          <div class="noticia_texto">
+            <h3>Demo disponible</h3>
+            <p>Tras años de desarrollo, nuestro equipo se enorgullece al anunciar que tenemos una muy actualizada
+              versión de desmostración que ya podeis probar. Hemos optimizado el videojuego tanto como hemos podido, y
+              hemos cambiado algunos aspectos, destacando entre ellos que, Jose Antonio en esta última actualización,
+              tiene menos pectorales, bajando drásticamente el peso del videojuego.</p>
+            <p class="noticia_fecha">03/03/2023</p>
+          </div>
+
+        </article>
+      </a>
+    </section>
+
     <h2>Paisajes</h2>
     <div class="carrousel">
       <div class="grande">
@@ -48,6 +64,7 @@
         <li class="punto">IES Rafel Alberti</li>
       </ul>
     </div>
+
     <h2>Personajes</h2>
     <ul class="ul">
       <li class="li">
@@ -73,10 +90,10 @@
     </ul>
 
     <div class="lightbox">
-
       <div class="content">
         <p class="descripcion">
-          <span>Lorena</span>Lorena es la protagonista del juego, una ciclista intrépida que debe sortear los obstáculos de las calles para
+          <span>Lorena</span>Lorena es la protagonista del juego, una ciclista intrépida que debe sortear los obstáculos
+          de las calles para
           llegar a su destino final: el IES Rafael Alberti, donde le espera la misión de crear una página OnePage para
           el profesor Alejandro Carmona.
 
@@ -84,26 +101,21 @@
           peatones que aparecen en su camino: José Antonio, Carolina y Simon. Cada vez que avanza de nivel, su bicicleta
           se mueve más rápido, lo que hace que sea más difícil evitar a los peatones y sus trampas.
 
-          Además, el tiempo límite para pasar cada nivel disminuye, lo que añade otra capa de dificultad al juego.
-          Lorena debe mantener la calma y la concentración, moviéndose con habilidad y evitando a los peatones a toda
-          costa si quiere llegar al IES Rafael Alberti antes de que se acabe el tiempo.
-
-          Pero no todo es tan difícil para Lorena. Si logra esquivar a los peatones con éxito, puede obtener una ventaja
-          adicional. Cada nivel superado le otorga un aumento de velocidad a su bicicleta, lo que le permite avanzar más
-          rápido por las calles y llegar a su destino con mayor rapidez.
-
           En definitiva, Lorena es una heroína en bicicleta que debe navegar por las calles de la ciudad para cumplir su
           misión y entregar su trabajo al profesor Carmona. Con su habilidad y determinación, puede sortear todos los
-          obstáculos y llegar al IES Rafael Alberti en tiempo y forma. ¡Buena suerte, Lorena!</p>
+          obstáculos y llegar al IES Rafael Alberti en tiempo y forma. ¡Buena suerte, Lorena!
+        </p>
 
         <p class="descripcion">
           <span>Carolina</span>Carolina es una pequeña pero poderosa enemiga en las calles. Con su apariencia inocente
           de niña buena y sus gafas intelectuales, no te dejes engañar, porque si chocas con ella en tu bicicleta, su
           ataque de ética te enviará de vuelta al principio del nivel. Pero si logras evitarla, te recompensará con una
-          vida extra. ¡Así que ten cuidado, Lorena, y haz tu mejor esfuerzo para sortear a la astuta Carolina!</p>
+          vida extra. ¡Así que ten cuidado, Lorena, y haz tu mejor esfuerzo para sortear a la astuta Carolina!
+        </p>
 
         <p class="descripcion">
-          <span>Jose Antonio</span>Jose Antonio es un personaje temido en las calles por los ciclistas, que lo ven como una
+          <span>Jose Antonio</span>Jose Antonio es un personaje temido en las calles por los ciclistas, que lo ven como
+          una
           verdadera amenaza. Con músculos de acero y piel morena de playa, se pasea con confianza con sus gafas gruesas
           que parecen ampliar su vista. Si un ciclista, como Lorena, lo choca, su bicicleta se desacelerará y perderá
           dos vidas.
@@ -111,25 +123,33 @@
           Pero la verdadera preocupación es que no siempre es fácil predecir sus movimientos. A veces
           se detendrá en medio de la acera, bloqueando el paso, otras veces, puede saltar de repente, desafiando
           cualquier intento de evitarlo.
-          ¡Cuidado, Lorena, no te metason Jose Antonio!</p>
+          ¡Cuidado, Lorena, no te metason Jose Antonio!
+        </p>
 
         <p class="descripcion">
           <span>Simon</span>Simon es un tipo duro con una apariencia envidiablemente bella. Pero ten cuidado, porque
           si te chocas con él en tu bicicleta, existe una pequeña posibilidad de que te robe la bici. Si eso sucede,
           pierdes todas tus vidas y tendrás que comenzar de nuevo desde cero. Así que es mejor esquivarlo a toda costa.
           Si logras evitarlo, sin embargo, Simon te sorprenderá con un truco: hará que tu bicicleta vaya más rápido.
-          Pero no te confíes demasiado, ¡la próxima vez puede que no sea tan educado!</p>
+          Pero no te confíes demasiado, ¡la próxima vez puede que no sea tan educado!
+        </p>
+
         <img src="./img/lorena.png" alt="Imagen 1" class="seleccion" loading="lazy">
+
+
       </div>
       <button class="cerrar">Cerrar</button>
-
     </div>
+
   </main>
   <img id="draggable-image" src="./img/lorena.png" draggable="true" class="lorena">
   <audio src="./audios/audios_audio_bici.mp3"></audio>
 
   <footer>
-    <p>© Biking Cadiz</p>
+    <p>2023 Biking Cadiz Estudios Todos los derechos reservados. Biking Cadiz © 2023 Colegas DAW. Todos los derechos
+      reservados.
+      IES Rafael Alberti. Biking Cadiz y todos los títulos, logotipos y personajes relacionados son marcas comerciales de
+      Colegas DAW.</p>
   </footer>
 </body>
 

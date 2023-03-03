@@ -1,8 +1,9 @@
 /* Estilos generales */
-body {
+  body {
     font-family:'League Spartan', sans-serif;
-    background-color: #ebfcff;
-    margin: 0;
+    background-color: #dcdedf;
+    margin: 0 auto;
+    max-width: 130rem;
   }
   
   header {
@@ -14,7 +15,28 @@ body {
     align-items: center;
     height:fit-content;
   }
+
+  footer{
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    color: #eee;
+    text-align: center;
+    justify-content: center;
+    
+  }
+
+  footer p{
+    font-size: 1rem;
+    max-width: 130rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
   
+  .nav{
+    margin-right: 2rem;
+  }
+
   nav ul {
     list-style: none;
     display: flex;
@@ -39,6 +61,12 @@ body {
   
   main {
     padding: 2rem;
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3rem;
+    
   }
 
   .video{
@@ -50,7 +78,7 @@ body {
     width:100%;
     display: block;
     margin: 0 auto;
-    margin-top: -100px
+    margin-top: -200px
   }
   
   section {
@@ -62,8 +90,8 @@ body {
   }
 
   h2 {
-    font-size: 2rem;
-    margin: 3rem 0rem 3rem 0rem
+    font-size: 4rem;
+    margin: 3rem 0rem 3rem 0rem;
   }
 
   p{
@@ -76,10 +104,6 @@ body {
     font-size: 4rem;
     margin-bottom: 2rem;
     display: block;
-  }
-
-  img{
-    height: 10rem;
   }
 
   aside{
@@ -98,11 +122,64 @@ body {
     margin-left: 2rem;
   }
 
-  /************GALERIA LIGHTBOX***********/
+/************NOTICIAS***********/
+  .noticias{
+    width: 90%;
+    display:flex;
+    flex-direction: column;
+
+  }
+
+  .noticias a{
+    text-decoration: none;
+  }
+
+  .noticias h2{
+    text-align: center;
+    font-size: 4rem;
+  }
+
+  .noticia{
+    height: fit-content;
+    background-color: #eee;
+    display: flex;
+  }
+
+  .noticia:hover{
+    transition: all .5s ease;
+    transform: scale(1.05);
+  }
+
+  .noticia_texto{
+    margin-left: 3rem;
+    color: #000;
+    text-align: start;
+    
+  }
+
+  .noticia_texto p{
+    font-size: 1.2vw;
+  }
+
+  .noticia_texto h3{
+    font-size: 2vw;
+  }
+
+  .noticia img{
+    display: flex;
+    height: 30vw;
+  }
+
+  
+/****************************************/
+
+
+
+/************GALERIA LIGHTBOX***********/
   .ul{
     list-style: none;
     display: flex;
-    column-gap: 5rem;
+    column-gap: 8rem;
   }
 
   .ul .li{
@@ -113,6 +190,8 @@ body {
   }
 
   .ul .img{
+    margin-top: 2rem;
+    height: 15rem;
     transition: all .5s ease;
     transform: scale(1.4);
   }
@@ -168,8 +247,6 @@ body {
     display: inline;
   }
   
-
-
   .lightbox .cerrar{
     width: 6em;
     height: 3em;
@@ -184,13 +261,7 @@ body {
     right: 1;
     height: 100%;
   }
-
   
-
-  .nav{
-    margin-right: 2rem;
-  }
-
   .personajes li{
     list-style: none;
   }
@@ -200,12 +271,17 @@ body {
     position: absolute; 
     right: 1; 
     bottom: 1;
+    height: 10rem;
+    padding: 2rem;
+    filter: drop-shadow(0px 2px 4px #222);
   }
+
+  
 
  /************CARROUSEL***********/
 
 .carrousel{
-  width: 30%;
+  width: 60%;
   max-width: 120em;
   overflow: hidden;
 }
@@ -224,26 +300,27 @@ body {
 .carrousel .img{
   width: calc(100%/4);
   height: 100%;
+  
 }
 
 .carrousel .puntos{
   padding: 1rem;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   list-style: none;
 }
 
 .carrousel .punto{
-  font-size: 0.8rem;
-  margin-left: 1rem;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  margin: 0;
+  font-size: 1.1rem;
+  padding: 2rem 4rem 2rem 4rem;
   width:fit-content;
   height:fit-content;
   cursor: pointer;
   background-color: #37aff0;
-  border-radius: 0.8rem;
+  border-radius: 1.5rem;
   font-weight: 600;
   text-align: center;
 }
@@ -255,4 +332,150 @@ body {
 .carrousel .punto.activo{
 color: #eee;
 background-color: #166f9e;
+}
+
+
+/*************MEDIAQUERY****************/
+
+@media (max-width: 1300px) {
+
+  video{
+   display: none;
+  }
+
+  .ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5rem;
+  }
+
+  .ul .li{
+    width: fit-content;
+    height: fit-content;
+    filter: drop-shadow(0px 5px 5px #222);
+    
+  }
+
+  .ul .img{
+    margin-top: 2rem;
+    height: 8rem;
+    transition: all .5s ease;
+    transform: scale(1.4);
+  }
+
+  .ul .li:hover .img{
+    transform: scale(1);
+  }
+
+  .lightbox{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #fff;
+    opacity: .9;
+    z-index: 2;
+
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    
+  }
+
+  .lightbox.activo{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10rem;
+    height: 100%;
+    width: 100%;
+  }
+
+  .lightbox .content{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .lightbox .content h3{
+    display: flex;
+    margin-right: 20rem;
+  }
+
+  .lightbox .content .seleccion{
+    height: 15rem;
+    width: fit-content;
+  }
+  .lightbox.activo .content .descripcion{
+    display: none;
+  }
+  .lightbox.activo .content .descripcion.activo{
+    display: inline;
+    font-size: 3vw;
+  }
+  
+  .lightbox .cerrar{
+    width: 5em;
+    height: 3em;
+    background: orange;
+    margin: 0;
+    cursor: pointer;
+    vertical-align: none;
+    font-size: 3vw;
+    font-weight: 600;
+    
+  }
+
+  
+
+  .lightbox .grande{
+    right: 1;
+    height: 100%;
+  }
+  
+  .personajes li{
+    list-style: none;
+  }
+
+  .carrousel{
+    width: 80%;
+    max-width: 120em;
+    overflow: hidden;
+  }
+
+  .carrousel .puntos{
+    padding: 0rem;
+    
+  }
+  .carrousel .punto{
+    margin: 0;
+    font-size: 2.3vw;
+    padding: 10px 5px 10px 5px ;
+    width:70px;
+    height:fit-content;
+    cursor: pointer;
+    background-color: #37aff0;
+    border-radius: 1rem;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .noticia img{
+    display: none;
+  }
+  .noticia_texto p{
+    margin: 1rem;
+    margin-right: 4rem;
+    max-width: fit-content;
+    font-size: 2.6vw;
+  }
+  .noticia_texto h3{
+    font-size: 3vw;
+  }
 }

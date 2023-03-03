@@ -142,7 +142,7 @@
       this[globalName] = mainExports;
     }
   }
-})({"lKzq4":[function(require,module,exports) {
+})({"4Iwud":[function(require,module,exports) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
@@ -625,9 +625,9 @@ document.addEventListener("mouseup", function() {
 });
 
 },{"./audios/audios_audio_bici.mp3":"jDaVA","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"jDaVA":[function(require,module,exports) {
-module.exports = require("ab1a7d56b43540c").getBundleURL("lPpKD") + "audios_audio_bici.0125b1e4.mp3" + "?" + Date.now();
+module.exports = require("7391e6d9bf43cf06").getBundleURL("lPpKD") + "audios_audio_bici.0125b1e4.mp3" + "?" + Date.now();
 
-},{"ab1a7d56b43540c":"lgJ39"}],"lgJ39":[function(require,module,exports) {
+},{"7391e6d9bf43cf06":"lgJ39"}],"lgJ39":[function(require,module,exports) {
 "use strict";
 var bundleURL = {};
 function getBundleURLCached(id) {
@@ -691,6 +691,6 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["lKzq4","bNKaB"], "bNKaB", "parcelRequireb8a9")
+},{}]},["4Iwud","bNKaB"], "bNKaB", "parcelRequireb8a9")
 
 //# sourceMappingURL=index.0641b553.js.map
